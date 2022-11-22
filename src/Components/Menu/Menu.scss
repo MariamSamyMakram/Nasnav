@@ -1,0 +1,21 @@
+@import "./../../App.scss";
+
+.menu {
+  background-color: $third_color;
+  ul {
+    li {
+      a {
+        text-decoration: none;
+        color: $white_color;
+        font-size: 18px;
+        &:hover,
+        &:focus {
+          color: $primary_color;
+        }
+      }
+      .offers {
+        color: red;
+      }
+    }
+  }
+}

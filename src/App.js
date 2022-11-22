@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import NavYeshtery from "./Components/NavTopYeshtery/NavTopYeshtery";
+import Product from "./Components/Product";
+import "./App.scss";
+import Footer from "./Components/Footer/Footer";
+import OffconvasYeshtery from "./Components/OffconvasYeshtery/OffconvasYeshtery";
+import ShowCart from "./Components/ShowCart/ShowCart";
 
 function App() {
+  // nav menu
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  // cart
+  const [showCart, setShowCart] = useState(false);
+  const handleCloseCart = () => setShowCart(false);
+  const handleShowCart = () => setShowCart(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavYeshtery handleShow={handleShow} />
+      <Product handleShowCart={handleShowCart} />
+      <Footer />
+      <OffconvasYeshtery show={show} handleClose={handleClose} />
+      <ShowCart show={showCart} handleClose={handleCloseCart} />
     </div>
   );
 }

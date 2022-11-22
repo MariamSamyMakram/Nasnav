@@ -1,0 +1,48 @@
+@import "./../../App.scss";
+
+.navBottom {
+  .input-group {
+    .btn {
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      border-right: none;
+      &:hover {
+        background-color: $primary_color;
+      }
+    }
+    .form-control {
+      border-radius: 25px;
+      border-left: none;
+      padding: 6px;
+      &::placeholder {
+        color: $third_color;
+      }
+      &:focus {
+        box-shadow: none;
+        border-color: #ddd;
+      }
+    }
+  }
+  .adidas {
+    width: 65px;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    img {
+      width: 25px;
+      margin-right: 3px;
+    }
+    .cartCounter {
+      background-color: $primary_color;
+      border-radius: 25px;
+      //   width: 15px;
+      //   height: 15px;
+      text-align: center;
+      position: relative;
+      top: -6px;
+      right: 6px;
+    }
+  }
+}

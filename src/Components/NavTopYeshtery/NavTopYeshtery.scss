@@ -1,0 +1,16 @@
+@import "./../../App.scss";
+
+.navbarTopYeshtery {
+  background-color: $primary_color;
+  span {
+    color: $four_color;
+    a {
+      text-decoration: underline;
+    }
+  }
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    color: $third_color;
+  }
+}

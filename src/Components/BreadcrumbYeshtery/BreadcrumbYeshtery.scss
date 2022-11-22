@@ -1,0 +1,10 @@
+@import "./../../App.scss";
+.BreadcrumbYeshtery {
+  border-bottom: 1.5px solid $five_color;
+  a {
+    color: $third_color;
+    .active {
+      color: $third_color;
+    }
+  }
+}

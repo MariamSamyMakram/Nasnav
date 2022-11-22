@@ -1,0 +1,51 @@
+@import "./../../App.scss";
+.footer {
+  background-color: $four_color;
+  p {
+    color: #fff;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.2;
+    img {
+      width: 50%;
+    }
+  }
+  .border_left {
+    border-left: 1px solid #6a6969;
+  }
+  h6 {
+    color: $white_color;
+  }
+  .input-group {
+    background-color: $white_color;
+    border-radius: 25px;
+    padding: 5px;
+    .form-control {
+      border-radius: 25px;
+      border: none;
+      &:focus {
+        box-shadow: none;
+        border-color: #ddd;
+      }
+    }
+    .btn {
+      background-color: $primary_color;
+      color: #000;
+      border: none;
+      border-radius: 25px !important;
+      width: 25%;
+    }
+  }
+  hr {
+    border-top: 1px solid #6a6969;
+    opacity: 1;
+  }
+  ul {
+    li {
+      a {
+        text-decoration: none;
+        color: $white_color;
+      }
+    }
+  }
+}
