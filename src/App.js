@@ -14,19 +14,35 @@ function App() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [cartVersion, setCartVersion] = useState(Math.random());
 
   // cart
   const [showCart, setShowCart] = useState(false);
   const handleCloseCart = () => setShowCart(false);
-  const handleShowCart = () => setShowCart(true);
+  const handleShowCart = () => {
+    setShowCart(true);
+    changeVersion();
+  };
+
+  const changeVersion = () => {
+    setCartVersion(Math.random());
+  };
 
   return (
     <div className="App">
       <NavYeshtery handleShow={handleShow} />
-      <Product handleShowCart={handleShowCart} />
+      <Product
+        handleShowCart={handleShowCart}
+        cartVersion={cartVersion}
+        changeVersion={changeVersion}
+      />
       <Footer />
       <OffconvasYeshtery show={show} handleClose={handleClose} />
-      <ShowCart show={showCart} handleClose={handleCloseCart} />
+      <ShowCart
+        show={showCart}
+        handleClose={handleCloseCart}
+        cartVersion={cartVersion}
+      />
     </div>
   );
 }

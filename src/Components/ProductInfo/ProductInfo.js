@@ -2,13 +2,8 @@ import React, { Component } from "react";
 import { Col, Container, Row, Image, Button } from "react-bootstrap";
 import Slider from "react-slick";
 import ReactStars from "react-rating-stars-component";
-
-import Product1 from "../../images/product1.png";
-import Product2 from "../../images/product2.png";
-import Product3 from "../../images/product3.png";
-import Product4 from "../../images/product4.png";
-import Adidas from "../../images/adidas.svg";
 import "./ProductInfo.scss";
+import { addCart } from "./../../CartApi.js";
 
 class ProductInfo extends Component {
   constructor(props) {
@@ -28,9 +23,6 @@ class ProductInfo extends Component {
   }
 
   render() {
-    const ratingChanged = (newRating) => {
-      console.log(newRating);
-    };
     const product = this.props.product;
 
     const handleDecrease = () => {
@@ -46,6 +38,11 @@ class ProductInfo extends Component {
           count: this.state.count + 1,
         });
       }
+    };
+    const handleAddCart = () => {
+      addCart(product.id, this.state.count).then((data) => {
+        this.props.changeVersion();
+      });
     };
     return (
       <div className="productInfo pt-5 pb-5">
@@ -118,7 +115,12 @@ class ProductInfo extends Component {
                   </h3>
                 </li>
                 <li className="pe-3">
-                  <p>{Math.floor(product.price/(1-(product.discountPercentage/100)))} LE</p>
+                  <p className="oldPrice">
+                    {Math.floor(
+                      product.price / (1 - product.discountPercentage / 100)
+                    )}{" "}
+                    LE
+                  </p>
                 </li>
                 <li className="pe-3">
                   <p className="offer">{product.discountPercentage}% Off</p>
@@ -153,30 +155,27 @@ class ProductInfo extends Component {
                     </li>
                   );
                 })}
-                <li className="pe-3">
-                  <Image src={Product1} alt="ProductColor" />
-                </li>
-                <li className="pe-3">
-                  <Image src={Product1} alt="ProductColor" />
-                </li>
               </ul>
               <hr />
               <h6>Quantity</h6>
-              <ul className="Quantity list-unstyled d-flex">
-                <li className="align-self-start">
+              <ul className="Quantity list-unstyled d-flex row p-1">
+                <li className="col-3 d-flex justify-content-start">
                   <button onClick={handleDecrease}>-</button>
                 </li>
-                <li className="ps-5 pe-5 ">{this.state.count}</li>
-                <input type="hidden" value={this.state.count} />
-                <li className="align-self-end">
+                <li className="ps-5 pe-5  col-6 text-center">
+                  {this.state.count}
+                </li>
+                <li className="col-3 d-flex justify-content-end">
                   <button onClick={handleIncrease}>+</button>
                 </li>
               </ul>
-              <ul className=" list-unstyled d-flex buttons">
-                <li>
-                  <Button variant="primary">Add To Cart</Button>
+              <ul className="list-unstyled d-flex buttons row">
+                <li className="col-6">
+                  <Button variant="primary" onClick={handleAddCart}>
+                    Add To Cart
+                  </Button>
                 </li>
-                <li>
+                <li className="col-6">
                   <Button variant="primary">Pickup From Store</Button>
                 </li>
               </ul>

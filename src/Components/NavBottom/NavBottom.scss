@@ -1,4 +1,5 @@
 @import "./../../App.scss";
+@import "./../../breakpoints.scss";
 
 .navBottom {
   .input-group {
@@ -25,6 +26,9 @@
   }
   .adidas {
     width: 65px;
+    @include xs {
+      width: 45px;
+    }
   }
   a {
     color: #000;
@@ -33,6 +37,9 @@
     img {
       width: 25px;
       margin-right: 3px;
+      @include xs {
+        width: 20px;
+      }
     }
     .cartCounter {
       background-color: $primary_color;
@@ -43,6 +50,9 @@
       position: relative;
       top: -6px;
       right: 6px;
+    }
+    @include xs {
+      font-size: 12px;
     }
   }
 }

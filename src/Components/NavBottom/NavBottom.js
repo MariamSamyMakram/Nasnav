@@ -10,14 +10,37 @@ import {
 } from "react-bootstrap";
 import Adidas from "../../images/adidas.svg";
 import "./NavBottom.scss";
+import { getCart } from "./../../CartApi";
+import memoize from "memoize-one";
 
 class NavBottom extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      quantity: 0,
+    };
+  }
+
+  fetchCart = memoize((version) => {
+    getCart().then((data) => {
+      this.setState({
+        quantity: data.carts?.length ? data.carts[0].totalQuantity : 0,
+      });
+    });
+  });
+
+  componentDidMount() {
+    this.fetchCart(this.props.cartVersion);
+  }
+  componentDidUpdate() {
+    this.fetchCart(this.props.cartVersion);
+  }
   render() {
     return (
       <div className="navBottom pt-3 pb-3">
         <Container>
           <Row>
-            <Col lg={4}>
+            <Col lg={4}  xs={12} className="mb-3 mb-lg-0">
               <Row>
                 <InputGroup>
                   <Button variant="outline-secondary" id="button-addon1">
@@ -31,26 +54,31 @@ class NavBottom extends Component {
                 </InputGroup>
               </Row>
             </Col>
-            <Col lg={4} className="d-flex justify-content-center">
+            <Col lg={3}  xs={12} className="d-flex justify-content-center mb-3 mb-md-0 d-md-none d-lg-flex">
               <Image src={Adidas} alt="adidas" className="adidas" />
             </Col>
-            <Col lg={4} className="pt-lg-3">
+            <Col lg={5} xs={12} className="pt-lg-2 pt-xl-3 mb-3 mb-md-0 text-center">
               <Row>
-                <Col lg={4}>
-                  <a href="#" onClick={this.props.handleShowCart}>
+                <Col xs={4} lg={4}>
+                  <a
+                    href="#"
+                    onClick={() => {
+                      this.props.handleShowCart();
+                    }}
+                  >
                     <span>
                       <Image src="/images/cart.svg" />
-                      <span className="cartCounter">0</span>
+                      <span className="cartCounter">{this.state.quantity}</span>
                     </span>
                     Cart
                   </a>
                 </Col>
-                <Col lg={4}>
+                <Col xs={4} lg={4}>
                   <a href="#">
                     <Image src="/images/wishlist.svg" /> Wishlist
                   </a>
                 </Col>
-                <Col lg={4}>
+                <Col xs={4} lg={4}>
                   <a href="#">
                     <Image src="/images/login.svg" /> Login
                   </a>

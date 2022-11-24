@@ -10,8 +10,12 @@ class OffconvasYeshtery extends Component {
   }
   render() {
     return (
-      <div className="offconvasYeshtery">
-        <Offcanvas show={this.props.show} onHide={this.props.handleClose}>
+      <>
+        <Offcanvas
+          className="menuOffcanvas"
+          show={this.props.show}
+          onHide={this.props.handleClose}
+        >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title></Offcanvas.Title>
           </Offcanvas.Header>
@@ -32,23 +36,23 @@ class OffconvasYeshtery extends Component {
                 <Nav.Link eventKey="link-2">Unisex</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li" className="pe-5">
-                <Nav.Link eventKey="link-2">Kids</Nav.Link>
+                <Nav.Link eventKey="link-3">Kids</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li" className="pe-5">
-                <Nav.Link eventKey="link-2">Best Sellers</Nav.Link>
+                <Nav.Link eventKey="link-4">Best Sellers</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li" className="pe-5">
-                <Nav.Link eventKey="link-2">New Arrivals</Nav.Link>
+                <Nav.Link eventKey="link-5">New Arrivals</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li" className="pe-5">
-                <Nav.Link eventKey="link-2" className="offers">
+                <Nav.Link eventKey="link-6" className="offers">
                   Offers
                 </Nav.Link>
               </Nav.Item>
             </Nav>
           </Offcanvas.Body>
         </Offcanvas>
-      </div>
+      </>
     );
   }
 }

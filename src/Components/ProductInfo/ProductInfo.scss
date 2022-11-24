@@ -1,4 +1,5 @@
 @import "./../../App.scss";
+@import "./../../breakpoints.scss";
 $gray_color: #9f9c9c;
 .productInfo {
   .Nav1 {
@@ -6,6 +7,12 @@ $gray_color: #9f9c9c;
       width: 100%;
       height: 500px;
       object-fit: contain;
+      @include xs {
+        height: 200px;
+      }
+      @include sm {
+        height: 250px;
+      }
     }
     button {
       display: none !important;
@@ -16,6 +23,34 @@ $gray_color: #9f9c9c;
       width: 95%;
       height: 125px;
       object-fit: contain;
+      padding: 20px;
+      @include xs {
+        height: 80px;
+        padding: 10px;
+      }
+      @include sm {
+        height: 80px;
+        padding: 10px;
+      }
+    }
+  }
+  .slick-next {
+    background: url("./arrRight.svg") center center no-repeat !important;
+    visibility: visible;
+    right: 0;
+    z-index: 1;
+    &::before {
+      display: none;
+    }
+  }
+
+  .slick-prev {
+    background: url("./arrLeft.svg") center center no-repeat !important;
+    visibility: visible;
+    left: 0;
+    z-index: 1;
+    &::before {
+      display: none;
     }
   }
   .adidas {
@@ -47,11 +82,16 @@ $gray_color: #9f9c9c;
     p {
       font-size: 14px;
       color: $gray_color;
+      text-decoration: line-through;
+    }
+    .oldPrice {
+      text-decoration: line-through;
     }
     .offer {
       background-color: $primary_color;
       color: $third_color;
       padding: 2px 13px;
+      text-decoration: none;
     }
   }
   .size {
@@ -79,17 +119,28 @@ $gray_color: #9f9c9c;
       width: 100%;
       height: 50px;
       border-radius: 25px;
-      object-fit: contain;
+      object-fit: cover;
+      @include xs {
+        height: 40px;
+      }
       &:hover {
         border: 1px solid $gray_color;
       }
     }
   }
   .Quantity {
-    padding: 5px 8px;
+    // padding: 5px 8px;
     background-color: #f5f5f5;
-    width: 190px;
+    width: 50%;
     border-radius: 25px;
+    @include xs {
+      width: 100%;
+      margin: 0;
+    }
+    @include sm {
+      width: 100%;
+      margin: 0;
+    }
     button {
       background-color: #fff200;
       border: none;
@@ -101,14 +152,22 @@ $gray_color: #9f9c9c;
     }
   }
   .buttons {
+    @include xs {
+      margin-top: 20px;
+    }
+    @include sm {
+      margin-top: 20px;
+    }
     button {
+      width: 100%;
       border: none;
       font-size: 14px;
       color: $third_color;
       border-radius: 25px;
-      margin-right: 25px;
-      padding: 9px 60px;
       background-color: $primary_color;
+      @include xs {
+        font-size: 12px;
+      }
       &:hover {
         background-color: $second_color;
         color: $white_color;

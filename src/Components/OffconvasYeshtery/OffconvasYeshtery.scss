@@ -1,11 +1,15 @@
 @import "./../../App.scss";
 
-.offconvasYeshtery {
-  #navOffcanvas {
-    .nav-link {
-      font-size: 18px !important;
-      font-weight: bold !important;
-      color: $third_color !important;
+.menuOffcanvas {
+  .nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: $third_color;
+    &:hover {
+      color: $primary_color;
     }
+  }
+  .nav-link.active {
+    color: $primary_color;
   }
 }

@@ -1,4 +1,5 @@
 @import "./../../App.scss";
+@import "./../../breakpoints.scss";
 
 .navbarTopYeshtery {
   background-color: $primary_color;
@@ -7,10 +8,16 @@
     a {
       text-decoration: underline;
     }
+    @include xs {
+      font-size: 12px;
+    }
   }
   a {
     text-decoration: none;
     font-size: 14px;
     color: $third_color;
+    @include xs {
+      font-size: 11px;
+    }
   }
 }

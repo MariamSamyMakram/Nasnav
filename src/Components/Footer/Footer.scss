@@ -1,4 +1,5 @@
 @import "./../../App.scss";
+@import "./../../breakpoints.scss";
 .footer {
   background-color: $four_color;
   p {
@@ -34,6 +35,22 @@
       border: none;
       border-radius: 25px !important;
       width: 25%;
+      @include xs {
+        font-size: 12px;
+        width: 35%;
+      }
+      @include sm {
+        font-size: 12px;
+        width: 35%;
+      }
+      img {
+        @include xs {
+          width: 20%;
+        }
+        @include sm {
+          width: 20%;
+        }
+      }
     }
   }
   hr {
@@ -45,6 +62,23 @@
       a {
         text-decoration: none;
         color: $white_color;
+      }
+    }
+  }
+  .copy {
+    p {
+      @include md {
+        font-size: 12px;
+      }
+      img {
+        @include md {
+          width: 100px;
+        }
+      }
+    }
+    img {
+      @include md {
+        width: 100%;
       }
     }
   }

@@ -4,6 +4,7 @@ import Menu from "./Menu/Menu";
 import NavBottom from "./NavBottom/NavBottom";
 import ProductInfo from "./ProductInfo/ProductInfo";
 import SimilarProducts from "./SimilarProducts/SimilarProducts";
+import { getProduct } from "./../ProductApi.js";
 
 class Product extends Component {
   constructor(props) {
@@ -12,23 +13,29 @@ class Product extends Component {
       product: {},
     };
   }
+
   componentDidMount() {
-    fetch("https://dummyjson.com/products/55")
-      .then((res) => res.json())
-      .then((data) =>
-        this.setState({
-          product: data,
-        })
-      );
+    getProduct(55).then((data) => {
+      this.setState({ product: data });
+    });
   }
+
   render() {
     return (
       <>
-        <NavBottom handleShowCart={this.props.handleShowCart} />
+        <NavBottom handleShowCart={this.props.handleShowCart} cartVersion={this.props.cartVersion} />
         <Menu />
         <BreadcrumbYeshtery />
-        <ProductInfo product={this.state.product} />
-        {this.state.product.category?(<SimilarProducts category={this.state.product.category} />):''}
+        <ProductInfo
+          product={this.state.product}
+          navBottomVersion={this.state.navBottomVersion}
+          cartVersion={this.props.cartVersion} changeVersion={this.props.changeVersion}
+        />
+        {this.state.product.category ? (
+          <SimilarProducts category={this.state.product.category} />
+        ) : (
+          ""
+        )}
       </>
     );
   }

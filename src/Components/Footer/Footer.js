@@ -56,8 +56,8 @@ class Footer extends Component {
                 </Button>
               </InputGroup>
               <Row className="mt-5">
-                <Col lg={8}>
-                  <ul className="list-unstyled ml-0">
+                <Col lg={8} md={6}>
+                  <ul className="list-unstyled ml-0 text-center text-md-left">
                     <li className="mb-3">
                       <a href="#">About Us</a>
                     </li>
@@ -81,8 +81,8 @@ class Footer extends Component {
                     </li>
                   </ul>
                 </Col>
-                <Col lg={4} className=" border_left ps-5">
-                  <ul className="list-unstyled ml-0">
+                <Col lg={4} md={6} className=" border_left ps-0 ps-md-5">
+                  <ul className="list-unstyled ml-0 text-center text-md-left">
                     <li className="mb-3">
                       <a href="#">
                         <Image src="/images/facebook.svg" />
@@ -113,12 +113,12 @@ class Footer extends Component {
             </Col>
           </Row>
           <hr />
-          <Row className="pt-3 pb-3">
-            <Col lg={5}>
-              <p className="mb-0 pt-3">© 2021 yeshtery, all rights reserved.</p>
+          <Row className="pt-3 pb-3 copy">
+            <Col xl={5} lg={4} xs={12} md={4}>
+              <p className="pt-2 text-center text-md-center">© 2021 yeshtery, all rights reserved.</p>
             </Col>
-            <Col lg={5}>
-              <ul className="list-unstyled d-flex">
+            <Col xl={5} lg={4} xs={12} md={4}>
+              <ul className="list-unstyled d-flex justify-content-center">
                 <li className="pe-3">
                   <Image src="/images/delivery.png" alt="img" />
                 </li>
@@ -130,8 +130,8 @@ class Footer extends Component {
                 </li>
               </ul>
             </Col>
-            <Col lg={2}>
-              <p className="mb-0 pt-3">
+            <Col xl={2} lg={4} xs={12} md={4}>
+              <p className="pt-2 text-center text-md-center">
                 Powered by <Image src="/images/nasnav.svg" alt="nasnav" />
               </p>
             </Col>
