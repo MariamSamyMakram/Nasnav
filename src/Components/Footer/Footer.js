@@ -56,8 +56,8 @@ class Footer extends Component {
                 </Button>
               </InputGroup>
               <Row className="mt-5">
-                <Col lg={8} md={6}>
-                  <ul className="list-unstyled ml-0 text-center text-md-left">
+                <Col lg={7} md={6} xs={6}>
+                  <ul className="list-unstyled ml-0">
                     <li className="mb-3">
                       <a href="#">About Us</a>
                     </li>
@@ -81,8 +81,8 @@ class Footer extends Component {
                     </li>
                   </ul>
                 </Col>
-                <Col lg={4} md={6} className=" border_left ps-0 ps-md-5">
-                  <ul className="list-unstyled ml-0 text-center text-md-left">
+                <Col lg={5} md={6} xs={6} className=" border_left ps-0 ps-md-5">
+                  <ul className="list-unstyled ml-0">
                     <li className="mb-3">
                       <a href="#">
                         <Image src="/images/facebook.svg" />

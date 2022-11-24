@@ -7,7 +7,7 @@ import Product from "./Components/Product";
 import "./App.scss";
 import Footer from "./Components/Footer/Footer";
 import OffconvasYeshtery from "./Components/OffconvasYeshtery/OffconvasYeshtery";
-import ShowCart from "./Components/ShowCart/ShowCart";
+const ShowCart = React.lazy(() => import("./Components/ShowCart/ShowCart"));
 
 function App() {
   // nav menu

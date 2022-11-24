@@ -13,6 +13,15 @@
   }
   .border_left {
     border-left: 1px solid #6a6969;
+    @include xs{
+      border-left: none;
+    }
+    @include md{
+      border-left:none ;
+    }
+    @include lg{
+      border-left:none ;
+    }
   }
   h6 {
     color: $white_color;
