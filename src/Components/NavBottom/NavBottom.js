@@ -61,7 +61,7 @@ class NavBottom extends Component {
               <Row>
                 <Col xs={4} lg={4}>
                   <a
-                    href="#"
+                    href="#cart"
                     onClick={() => {
                       this.props.handleShowCart();
                     }}
@@ -74,12 +74,12 @@ class NavBottom extends Component {
                   </a>
                 </Col>
                 <Col xs={4} lg={4}>
-                  <a href="#">
+                  <a href="#wishtlist">
                     <Image src="/images/wishlist.svg" /> Wishlist
                   </a>
                 </Col>
                 <Col xs={4} lg={4}>
-                  <a href="#">
+                  <a href="#login">
                     <Image src="/images/login.svg" /> Login
                   </a>
                 </Col>

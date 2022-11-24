@@ -59,50 +59,50 @@ class Footer extends Component {
                 <Col lg={7} md={6} xs={6}>
                   <ul className="list-unstyled ml-0">
                     <li className="mb-3">
-                      <a href="#">About Us</a>
+                      <a href="#about-us">About Us</a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">Contact Us </a>
+                      <a href="#contact-us">Contact Us </a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">Track Order</a>
+                      <a href="#track-order">Track Order</a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">Terms & Conditions</a>
+                      <a href="#terms-conditions">Terms & Conditions</a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">Privacy Policy</a>
+                      <a href="#privacy-policy">Privacy Policy</a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">Sell With Us</a>
+                      <a href="#sell-with-us">Sell With Us</a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">Shippings and returns</a>
+                      <a href="#shipping">Shippings and returns</a>
                     </li>
                   </ul>
                 </Col>
                 <Col lg={5} md={6} xs={6} className=" border_left ps-0 ps-md-5">
                   <ul className="list-unstyled ml-0">
                     <li className="mb-3">
-                      <a href="#">
+                      <a href="#facebook">
                         <Image src="/images/facebook.svg" />
                         /YESHTERY
                       </a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">
+                      <a href="#linked-in">
                         <Image src="/images/linkedin.svg" />
                         /YESHTERY
                       </a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">
+                      <a href="#insta">
                         <Image src="/images/insta.svg" />
                         /YESHTERY
                       </a>
                     </li>
                     <li className="mb-3">
-                      <a href="#">
+                      <a href="#twitter">
                         <Image src="/images/twitter.svg" />
                         /YESHTERY
                       </a>

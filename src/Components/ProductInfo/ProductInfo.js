@@ -130,19 +130,19 @@ class ProductInfo extends Component {
               <h6>Size</h6>
               <ul className="list-unstyled d-flex size">
                 <li>
-                  <a href="#">Small</a>
+                  <a href="#small">Small</a>
                 </li>
                 <li>
-                  <a href="#">Meduim</a>
+                  <a href="#meduim">Meduim</a>
                 </li>
                 <li>
-                  <a href="#">Large</a>
+                  <a href="#large">Large</a>
                 </li>
                 <li>
-                  <a href="#">X Large</a>
+                  <a href="#xlarge">X Large</a>
                 </li>
                 <li>
-                  <a href="#">XX Large</a>
+                  <a href="#xxlarge">XX Large</a>
                 </li>
               </ul>
               <hr />

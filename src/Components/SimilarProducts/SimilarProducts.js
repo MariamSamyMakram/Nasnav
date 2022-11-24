@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import { Col, Container, Row, Card, Image } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 import Slider from "react-slick";
 import { getProducts } from "./../../ProductApi.js";
 
 import "./SimilarProducts.scss";
-
-import Product4 from "../../images/product4.png";
-import Adidas from "../../images/adidas.svg";
 
 class SimilarProducts extends Component {
   constructor(props) {
@@ -66,7 +63,6 @@ class SimilarProducts extends Component {
         },
       ],
     };
-    const RelatedProducts = this.state.products;
 
     return (
       <div className="similarProducts pt-5 pb-5">

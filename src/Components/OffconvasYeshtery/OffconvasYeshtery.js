@@ -5,9 +5,6 @@ import { Nav } from "react-bootstrap";
 import "./OffconvasYeshtery.scss";
 
 class OffconvasYeshtery extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <>
