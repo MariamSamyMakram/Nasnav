@@ -58,10 +58,10 @@ class ShowCart extends Component {
                 return (
                   <li key={product.id} className="pt-2 pb-2">
                     <Row>
-                      <Col md={4}>
+                      <Col xs={4} md={4}>
                         <Image src={Product2} alt="Product" />
                       </Col>
-                      <Col md={8}>
+                      <Col xs={8} md={8}>
                         <p className="description">{product.title}</p>
                         <p className="quantity">Quantity: {product.quantity}</p>
                         <Row>
@@ -82,10 +82,10 @@ class ShowCart extends Component {
             </ul>
             <h4 className="text-center mt-4 mb-4">Total: {total} LE</h4>
             <Row>
-              <Col md={6}>
+              <Col xs={6} md={6}>
                 <button className="cart"> Review Cart</button>
               </Col>
-              <Col md={6}>
+              <Col xs={6} md={6}>
                 <button className="cart">Complete Checkout</button>
               </Col>
             </Row>

@@ -1,4 +1,5 @@
 @import "./../../App.scss";
+@import "./../../breakpoints.scss";
 .showCart {
   h3 {
     color: $second_color;
@@ -34,9 +35,13 @@
     border-radius: 25px;
     font-size: 12px;
     font-weight: bold;
-    &:hover{
-        background-color: $second_color;
-        color: $white_color;
+    &:hover {
+      background-color: $second_color;
+      color: $white_color;
+    }
+    @include xs {
+      font-size: 11px;
+      height: 30px;
     }
   }
 }

@@ -115,10 +115,10 @@ class Footer extends Component {
           <hr />
           <Row className="pt-3 pb-3 copy">
             <Col xl={5} lg={4} xs={12} md={4}>
-              <p className="pt-2 text-center text-md-center">© 2021 yeshtery, all rights reserved.</p>
+              <p className="pt-2 ">© 2021 yeshtery, all rights reserved.</p>
             </Col>
             <Col xl={5} lg={4} xs={12} md={4}>
-              <ul className="list-unstyled d-flex justify-content-center">
+              <ul className="list-unstyled d-flex ">
                 <li className="pe-3">
                   <Image src="/images/delivery.png" alt="img" />
                 </li>
@@ -131,7 +131,7 @@ class Footer extends Component {
               </ul>
             </Col>
             <Col xl={2} lg={4} xs={12} md={4}>
-              <p className="pt-2 text-center text-md-center">
+              <p className="pt-2 ">
                 Powered by <Image src="/images/nasnav.svg" alt="nasnav" />
               </p>
             </Col>
